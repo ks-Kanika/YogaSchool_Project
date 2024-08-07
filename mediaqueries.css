@@ -1,0 +1,54 @@
+/* General container styling */
+#feature .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Small padding on the sides */
+}
+
+/* Media query for laptops and larger screens */
+@media (min-width: 1024px) {
+    #feature .container {
+        padding: 0 30px; /* Slightly increase padding on larger screens */
+    }
+}
+
+/* Media query for smaller screens (laptops with lower resolution or tablets) */
+@media (max-width: 1024px) {
+    #feature .row {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;    /* Center items */
+    }
+
+    .offer-deal {
+        max-width: 90%; /* Reduce the width for smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+/* Media query for very small screens (e.g., mobile phones) */
+@media (max-width: 768px) {
+    #feature .container {
+        padding: 0 10px;
+    }
+
+    .offer-deal {
+        max-width: 100%; /* Full width on mobile */
+        margin-bottom: 20px;
+    }
+
+    .offer-deal .img {
+        height: 200px; /* Adjust image height */
+    }
+
+    .About-yoga {
+        padding: 15px; /* Reduce padding */
+    }
+
+    .About-yoga-h3 {
+        font-size: 22px; /* Reduce font size */
+    }
+
+    .About-yoga-p {
+        font-size: 16px; /* Reduce font size */
+    }
+}
