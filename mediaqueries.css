@@ -1,6 +1,6 @@
 /* General container styling */
 #feature .container {
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 15px; /* Small padding on the sides */
 }
@@ -52,3 +52,153 @@
         font-size: 16px; /* Reduce font size */
     }
 }
+/* ABOUT-SECTION */
+/* General Styles */
+#about {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.left, .Right-home-about {
+    flex: 1;
+    padding: 10px;
+}
+
+/* Flexbox to arrange images side by side */
+.left-of-left, .right-of-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.top-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.right-para {
+    margin-top: 20px;
+}
+
+.para-2 {
+    margin-top: 10px;
+}
+
+.about-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+/* 
+/* Responsive Design */
+
+/* Mobile */
+/* @media (max-width: 600px) {
+    #about {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left, .Right-home-about {
+        width: 100%;
+    }
+    .right-of-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .top-inner {
+        flex: 0 0 48%;
+    }
+} */
+
+/* Tablet */
+/* @media (min-width: 601px) and (max-width: 1024px) {
+    #about {
+        flex-direction: column;
+    }
+    .left, .Right-home-about {
+        width: 100%;
+    }
+    .right-of-right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .top-inner {
+        flex: 0 0 48%;
+    }
+} */
+
+/* Laptop and Desktop */
+/* @media (min-width: 1025px) {
+    #about {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .left, .Right-home-about {
+        flex: 1;
+    }
+    .right-of-right {
+        display: flex;
+        flex-direction: column;
+    }
+    .top-inner {
+        flex: 1;
+    }
+} */ 
+
+/* Responsive adjustments */
+/* @media   (max-width: 1200px) {
+    .my-gallery .col-lg-3 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+} */
+
+/* @media (max-width: 992px) {
+    .my-gallery .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+} */
+
+/* @media (max-width: 768px) {
+    .my-gallery .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} */
+ /* TEAM */
+/* @media (max-width: 1200px) {
+    .Teachers {
+        flex: 1 1 calc(33.33% - 20px); /* 3 columns */
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .Teachers {
+        flex: 1 1 calc(50% - 20px); /* 2 columns */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .Teachers {
+        flex: 1 1 100%; /* 1 column */
+        max-width: 100%;
+    }
+} */

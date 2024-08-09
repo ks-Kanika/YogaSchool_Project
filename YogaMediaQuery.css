@@ -1,0 +1,57 @@
+/* Tablet and above */
+@media (min-width: 768px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .nav-item {
+        margin-left: 25px;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 8px 0;
+    }
+}
+/* Home Section*/
