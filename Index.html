@@ -12,12 +12,16 @@
     <link rel="stylesheet" href="Style.css">
 </head>
 
-<body data-spy="scroll" data-targrt="#navbarNav" data-offset="50">
+<body >
 
     <!--Navbar starts-->
     
-    <div class="navbar navbar-expand-lg fixed-top">
+    <!-- <div class="navbar navbar-expand-lg fixed-top">
         <div class="container">
+            <a href="#" class="navbar-brand">NamasteYoga</a>
+            <div class="hamburger-menu">
+              &#9776;
+            </div>
             <a href="index.html" class="navbar-brand">Namaste yoga</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-lg-auto">
@@ -55,8 +59,46 @@
                 </ul>
             </div>
         </div>
-    </div>
-
+    </div> -->
+    <nav id="desktop_nav">
+        <div class="logo">Namaste Yoga</div>
+        <div >
+            <ul class="nav_Link">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Gallery</a></li>
+                <li><a href="#experience">Our Team</a></li>
+                <li><a href="#experience">Gallery</a></li>
+                <li><a href="#projects"> Class</a></li>
+                <li><a href="#contact">Schedule </a></li>
+                <li><a href="#contact">Events </a></li>
+                <li><a href="#contact">Contact Us </a></li>
+            </ul>
+     
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Namaste Yoga</div>
+        <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="menu-links">
+            
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+                <li><a href="#our team"  onclick="toggleMenu()">Our Team</a></li>
+                <!-- <li><a href="#gallery"  onclick="toggleMenu()"> Gallery</a></li> -->
+                <li><a href="#class"  onclick="toggleMenu()">Class </a></li>
+                <li><a href="#schedule"  onclick="toggleMenu()">Schedule </a></li>
+                <li><a href="#events"  onclick="toggleMenu()">Events </a></li>
+            <li><a href="#contact"  onclick="toggleMenu()">Contact </a></li>
+        </ul>
+        </div>
+    
+    </nav>
     <!--Navbar ends-->
     <header class="banner">
         <h1 class="heading">Grand Opening of Yoga Classes</h1>
@@ -100,6 +142,7 @@
         </div>
     </div>
     <div class="Right-home-about spad">
+        <h1>About Us</h1>
         <h2 class="section-title">Welcome To <br> Yoga-School </h2>
     <div class="right-para">
     <span>"What hurts today makes you stronger tomorrow."</span>
@@ -308,6 +351,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis recusanda
 
 
     <!-- section 5 ends -->
+    <!-- section 5 ends -->
 
 
     <!-- section 6 starts -->
@@ -431,8 +475,106 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis recusanda
 
     <!-- section 6 ends -->
      
-      <!-- section 7 starts -->
+      <!-- section 7 Team  starts -->
 
+    <section class="our-team-area " id="team">
+                
+                    <div class="our-team ">
+                    
+
+                        <h2> Meet Our Team</h2>
+                    </div>
+
+
+
+            <div class="row" >
+                
+                    <div class="Teachers">
+                    <div class="team-content-area">
+                        <div class="teacher-img">
+                            <img src="/Images/20.jpg" alt="">
+                        </div>
+                        <h5>Priyanka Patel</h5>
+                        <span>Instructor</span>
+                        <div class="member-social-info">
+                            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></i></a>
+ 
+                           </div>
+                    </div>
+                </div>
+                <div class="Teachers">
+                    <div class="team-content-area">
+                        <div class="teacher-img">
+                            <img src="/Images/instructor.jpg"  alt="">
+                        </div>
+                        <h5>Priyanka Patel</h5>
+                        <span>Instructor</span>
+                        <div class="member-social-info">
+                            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></i></a>
+ 
+ 
+                           </div>
+                    </div>
+                </div>
+
+
+                
+                    <div class="Teachers">
+                    <div class="team-content-area ">
+                        <div class="teacher-img">
+                            <img src="/Images/20.jpg" alt="">
+                        </div>
+                        <h5>Radhika Patel</h5>
+                        <span>Coach</span>
+                        <div class="member-social-info">
+                            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></i></a>
+ 
+ 
+                        </div>
+                    </div>
+                </div>
+            
+                    <div class="Teachers">
+                    <div class="team-content-area">
+                        <div class="teacher-img">
+                            <img src="/Images/20.jpg" alt="">
+                        </div>
+                        <h5>Mayuri Patel</h5>
+                        <span>Manager</span>
+                        <div class="member-social-info">
+                            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></i></a>
+ 
+ 
+                        </div>
+                    </div>
+                </div>
+                
+                    <div class="Teachers">
+                    <div class="team-content-area" >
+                        <div class="teacher-img">
+                            <img src="/Images/20.jpg" alt="">
+                        </div>
+                        <h5>Nilay Hirpara</h5>
+                        <span>Trainer</span>
+                        <div class="member-social-info">
+                            <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.whatsapp.com" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></i></a>
+ 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- section 7 ends -->
@@ -496,7 +638,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis recusanda
     </section>
     <!-- section 8 ends -->
 
-    <!-- section 9  starts-->
+    <!-- section 9  Form_QUery starts-->
     <div class="contact-section" id="contact">
         <div class="Query-container">
             <div class="contact-form">
@@ -531,60 +673,11 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis recusanda
     
     <!-- section 9  ends-->
 
-    <!-- section 10 starts -->
+    <!-- section 10 Footer starts -->
 
-    
-    <!-- section 10 ends -->
     
     
     
-
-    <!-- section 11 starts  -->
-    <!-- <div class="modal fade" id="membershipForm" tabindex="-1" role="dialog" aria-labelledby="membershipFormLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="membershipFormLabel">
-                        Membership Form
-                    </h2>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span>&times;</span>
-                    </button>
-                </div>
-
-                <div class="modal-body">
-                    <form class="membership-form webform" role="form">
-                        <input type="text" class="form-control" name="cf-name" placeholder="John Doe" />
-
-                        <input type="email" class="form-control" name="cf-email" placeholder="Johndoe@gmail.com" />
-
-                        <input type="tel" class="form-control" name="cf-phone" placeholder="123-456-7890"
-                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-
-                        <textarea class="form-control" rows="3" name="cf-message"
-                            placeholder="Additional Message"></textarea>
-
-                        <button type="submit" class="form-control" id="submit-button" name="submit">
-                            Submit Button
-                        </button>
-
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="signup-agree" />
-                            <label class="custom-control-label text-small text-muted" for="signup-agree">I agree to the
-                                <a href="#">Terms &amp;Conditions</a>
-                            </label>
-                        </div>
-                    </form>
-                </div>
-
-                <div class="modal-footer"></div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- section 11 ends  -->
-
     <section class="footer">
         <div class="container">
             <div class="row">
@@ -664,7 +757,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis recusanda
             </div>
         </div>
     </section>
-
+<!-- section 10 ends -->
 
 
 <!-- 

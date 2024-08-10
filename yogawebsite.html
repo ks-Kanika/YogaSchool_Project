@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="yoga.css">
+</head>
+<body>
+    <!--Navbar Starts-->
+    <nav id="desktop_nav">
+        <div class="logo">Namaste Yoga</div>
+        <ul class="nav_Link">
+            <li><a href="#about">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#class">Class</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!--Navbar end-->
+    <!--Hamburger Starts-->
+    <nav id="hamburger-nav">
+        <div class="logo">Namaste Yoga</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <ul class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
+            <li><a href="#team" onclick="toggleMenu()">Our Team</a></li>
+            <li><a href="#class" onclick="toggleMenu()">Class</a></li>
+            <li><a href="#schedule" onclick="toggleMenu()">Schedule</a></li>
+            <li><a href="#events" onclick="toggleMenu()">Events</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!--Hamburger End -->
+    <!--banner Starts-->
+    <header class="banner">
+        <h1 class="heading">Grand Opening of Yoga Classes</h1>
+    <p> "Give yourself time and stay healthy <br>— practice yoga to escape the rush of life"</p>
+    <marquee class="marquee" behavior="scroll" direction="up" scrollamount="2" scrolldelay="100">
+        'Inhale the Future, Exhale the Past'
+      </marquee>
+      </header>
+      <!--Banner End-->
+      <!--Home Page Starts-->
+      
+      <main class="introduction">
+        <section class="intro-section">
+            <div class="intro-image-container">
+                <img src="/Images/background-image.jpg" alt="Yoga class" class="intro-image"> <!-- Replace with your image URL -->
+                <a  href="Membership Form.html"><button class="join-member-button">Become a Member</button></a>
+            </div>
+            <div class="intro-text">
+                <h2>Welcome to "Namaste Yoga" School</h2>
+                <p>At Namaste Yoga School, we are committed to providing a serene and supportive environment for your yoga practice. Our team of experienced instructors offers a variety of classes designed to improve physical strength, mental clarity, and overall well-being. Join us and explore the transformative benefits of yoga, whether you're just starting out or looking to deepen your practice.</p>
+                <button class="home-button"> Try 14 days Free</button>
+            
+                    <a href="userRegisandLoginForm.html" target="_blank">  <button>Sign Up</button></a>
+            </div>
+            
+        </section>
+      </main>
+      <!--Home Page End-->
+      <!--About page start-->
+      <div class="container">
+        <div class="content">
+            <h1>About Our Yoga Classes</h1>
+            <p>
+                Our yoga classes are designed to help you find balance, strength, and flexibility. We offer a variety of classes suitable for all levels, from beginners to advanced practitioners. Our instructors are experienced and passionate about guiding you through your yoga journey, whether you're looking to improve your physical health, mental well-being, or both.
+            </p>
+            <p>
+                At our yoga school, we believe in the holistic approach to health. Yoga is not just about the physical postures; it is a way of life. Join us and experience the benefits of yoga in a supportive and welcoming environment.
+            </p>
+            <div>
+                <p id="moreContent" style="display: none;">
+                    This is the additional content that will be revealed when the button is clicked. It can be any text or HTML content you want to display.
+                    Yoga offers a comprehensive approach to wellness that integrates physical, mental, and emotional health, leading to a holistic enhancement of quality of life. Physically, yoga improves flexibility, strength, and balance through various poses and stretches, which not only increases the range of motion but also builds muscle endurance and stability. It supports proper posture and alignment, which can alleviate chronic pain conditions like lower back pain and arthritis, while promoting better respiratory function and circulation. Mentally, yoga is known for its profound stress-relieving effects. The practice of controlled breathing and mindfulness fosters relaxation, reduces anxiety and depression, and enhances emotional stability. By improving focus and mental clarity, yoga also helps manage stress and promotes better sleep. Additionally, the mindfulness and self-awareness cultivated through yoga can lead to increased self-esteem and a deeper connection with oneself. Overall, yoga encourages a balanced lifestyle, enhances overall well-being, and fosters a sense of community and support among practitioners, making it a valuable practice for achieving a more harmonious and fulfilling life.
+                </p>
+                <button id="readMoreButton">Read More</button>
+            </div>
+            
+        </div>
+        <div class="image-slider">
+            <div class="slider">
+                <img src="/Images/yoga-img.jpg" alt="Yoga Class 1" class="slide active">
+                <img src="/Images/yoga-img2.jpg" alt="Yoga Class 2" class="slide">
+                <img src="/Images/yoga-img3.jpg" alt="Yoga Class 3" class="slide">
+                <img src="/Images/yoga-img4.jpg" alt="Yoga Class 3" class="slide">
+                <img src="/Images/yoga-img5.jpg" alt="Yoga Class 3" class="slide">
+                <img src="/Images/yoga-img6.jpg" alt="Yoga Class 3" class="slide">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="yogaScript.js"></script>
+</body>
+</html>
