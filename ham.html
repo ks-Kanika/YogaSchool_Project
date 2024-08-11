@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Classes Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styling for Calendar */
+        #calendar {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 10px;
+            background-color: rgb(192, 156, 162);
+        }
+        .fc-event {
+            border-radius: 8px;
+            border: none;
+            color: #fff;
+            font-size: 14px;
+        }
+        .fc .fc-toolbar-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4A4A4A;
+        }
+        .fc-button-primary {
+            background-color: #00a896;
+            border-color: #00a896;
+        }
+        .fc-button-primary:hover {
+            background-color: #028090;
+            border-color: #028090;
+        }
+    </style>
+</head>
+<body>
+    <div id="calendar"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/locales-all.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'timeGridWeek',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'timeGridWeek,timeGridDay'
+                },
+                events: [
+                    // Monday to Friday Active Classes (Green)
+                    {
+                        title: 'Yoga Asanas',
+                        start: '2024-08-12T06:00:00',
+                        end: '2024-08-12T08:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Pranayama',
+                        start: '2024-08-12T09:00:00',
+                        end: '2024-08-12T11:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Yoga Asanas',
+                        start: '2024-08-13T06:00:00',
+                        end: '2024-08-13T08:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Pranayama',
+                        start: '2024-08-13T09:00:00',
+                        end: '2024-08-13T11:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Yoga Asanas',
+                        start: '2024-08-14T06:00:00',
+                        end: '2024-08-14T08:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Pranayama',
+                        start: '2024-08-14T09:00:00',
+                        end: '2024-08-14T11:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Yoga Asanas',
+                        start: '2024-08-15T06:00:00',
+                        end: '2024-08-15T08:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Pranayama',
+                        start: '2024-08-15T09:00:00',
+                        end: '2024-08-15T11:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Yoga Asanas',
+                        start: '2024-08-16T06:00:00',
+                        end: '2024-08-16T08:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Pranayama',
+                        start: '2024-08-16T09:00:00',
+                        end: '2024-08-16T11:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    // Saturday and Sunday Inactive Classes (Red)
+                    {
+                        title: 'No Class - Sat',
+                        start: '2024-08-17T06:00:00',
+                        end: '2024-08-17T08:00:00',
+                        color: '#e63946' // Red for inactive class
+                    },
+                    {
+                        title: 'No Class - Sat',
+                        start: '2024-08-17T09:00:00',
+                        end: '2024-08-17T11:00:00',
+                        color: '#e63946' // Red for inactive class
+                    },
+                    {
+                        title: 'No Class - Sun',
+                        start: '2024-08-18T06:00:00',
+                        end: '2024-08-18T08:00:00',
+                        color: '#e63946' // Red for inactive class
+                    },
+                    {
+                        title: 'No Class - Sun',
+                        start: '2024-08-18T09:00:00',
+                        end: '2024-08-18T11:00:00',
+                        color: '#e63946' // Red for inactive class
+                    },
+                    // Repeat for future weeks and months
+                    {
+                        title: 'Yoga Asanas',
+                        start: '2024-08-19T06:00:00',
+                        end: '2024-08-19T08:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    {
+                        title: 'Pranayama',
+                        start: '2024-08-19T09:00:00',
+                        end: '2024-08-19T11:00:00',
+                        color: '#00a896' // Green for active class
+                    },
+                    // Continue for all months
+                ],
+                locale: 'en',
+                allDaySlot: false,
+                slotMinTime: '06:00:00',
+                slotMaxTime: '20:00:00'
+            });
+
+            calendar.render();
+        });
+    </script>
+</body>
+</html>
