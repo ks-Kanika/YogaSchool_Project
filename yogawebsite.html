@@ -11,11 +11,12 @@
     <nav id="desktop_nav">
         <div class="logo">Namaste Yoga</div>
         <ul class="nav_Link">
-            <li><a href="#about">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#class">Class</a></li>
+
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#team">Our Team</a></li>
-            <li><a href="#class">Class</a></li>
             <li><a href="#schedule">Schedule</a></li>
             <li><a href="#events">Events</a></li>
             <li><a href="#contact">Contact Us</a></li>
@@ -55,7 +56,7 @@
       <!--Banner End-->
       <!--Home Page Starts-->
       
-      <main class="introduction">
+      <main class="introduction" id="home">
         <section class="intro-section">
             <div class="intro-image-container">
                 <img src="/Images/background-image.jpg" alt="Yoga class" class="intro-image"> <!-- Replace with your image URL -->
@@ -73,6 +74,7 @@
       </main>
       <!--Home Page End-->
       <!--About page start-->
+      <section id="about">
       <div class="container">
         <div class="content">
             <h1>About Our Yoga Classes</h1>
@@ -104,9 +106,12 @@
             </div>
         </div>
     </div>
+    </section>
+
+<!--Aboout Page End-->
 <!--Class Page Start-->
-<body>
-    <section id="class" class="section-class">
+<section id="class"> 
+       <section  class="section-class">
       <h1 class="class-heading">Welcome to Our Yoga Class</h1>
       
           <ul class="class-navbar">
@@ -168,20 +173,10 @@
       <a href="yttc200.html" class="learn-more">Learn More</a>
   </section>
   
+</section>
+<!--Class Page End-->
+
   
-  
-  <script>
-    // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-              behavior: 'smooth'
-          });
-      });
-  });
-  
-  </script>
     
 
 

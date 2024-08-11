@@ -930,3 +930,143 @@ line-height: 1.6; /* Increase line height for better readability */
 color: #555; /* Medium gray text color */
 text-align: justify; /* Justify text alignment */
 }
+/* Class Page Start*/
+    /* General Styles */
+
+
+    h1, h2, h3 {
+      color: #2c3e50;
+  }
+  
+  /* Section Styles */
+  .section-class {
+      padding: 20px;
+      background-color: #f7f7f7;
+  }
+  
+  .class-heading {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+  }
+  
+  .class-navbar {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+  }
+  
+  .class-navbar li {
+      display: inline;
+      margin: 0 15px;
+  }
+  
+  .class-navbar a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+  }
+  
+  .class-navbar a:hover {
+      text-decoration: underline;
+  }
+  
+  .yoga-schedule {
+      padding: 20px;
+      background-color: #fff;
+      /* background-color: rgb(200, 140, 263 , 0.5); */
+      background-color: rgb(200, 140, 233 , 0.5);
+      
+  }
+  
+  .yoga-schedule p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+  }
+  
+  .yoga-schedule a {
+      color: blue;
+      text-decoration: none;
+  }
+  
+  .yoga-schedule a:hover {
+      text-decoration: underline;
+  }
+  
+  .another-class-section {
+      padding: 20px;
+      background-color: #f7f7f7;
+  }
+  
+  .class-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+  
+  .class-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin: 10px;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+  
+  }
+  
+  .class-item:hover {
+  transform: scale(1.05);
+  }
+  .enroll-btn {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease-out;
+  }
+  
+  .enroll-btn:hover {
+      background-color: green;
+      transform: scale(1.05);
+  }
+  
+  .yoga-100 {
+      padding: 20px;
+      background-color: #fff;
+  }
+  
+  .learn-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1em;
+  }
+  
+  .learn-more:hover {
+      background-color: #2980b9;
+  }
+  .yoga-100{
+    background-color: rgb(200, 140, 233 , 0.5);
+    text-align: center;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+      .class-list {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .class-item {
+          width: 90%;
+      }
+  }
