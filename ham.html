@@ -1,1077 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* General Styles */
 
-</head>
-<style>
-    /* Base styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+
+h1, h2, h3 {
+    color: #2c3e50;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    /* background-color: #333; */
-    background-color: #5D6D7E; /* Soothing slate blue */
+/* Section Styles */
+.section-class {
+    padding: 20px;
+    background-color: #f7f7f7;
 }
 
-.logo {
-    color: #F7F9F9; /* Light ivory */
-    font-size: 1.8em;
+.class-heading {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.class-navbar {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.class-navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.class-navbar a {
+    text-decoration: none;
+    color: #3498db;
     font-weight: bold;
 }
 
-
-/* Desktop navigation styles */
-#desktop_nav {
-    display: flex;
+.class-navbar a:hover {
+    text-decoration: underline;
 }
 
-.nav_Link {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+.yoga-schedule {
+    padding: 20px;
+    background-color: #fff;
 }
 
-.nav_Link li {
-    margin: 0;
+.yoga-schedule p {
+    font-size: 1.2em;
+    line-height: 1.6em;
 }
 
-.nav_Link a {
-    color: #F7F9F9;;
+.yoga-schedule a {
+    color: #3498db;
     text-decoration: none;
-    padding: 15px;
-    display: block;
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav_Link a:hover {
-    background-color: #AAB7B8; /* Soft stone grey */
-    color: #2E4053; /* Deep slate blue */
+.yoga-schedule a:hover {
+    text-decoration: underline;
 }
 
-/* Hamburger menu icon */
-.hamburger-icon span {
-    background-color: #F7F9F9; /* Light ivory */
-}
-/* Hamburger menu styles */
-#hamburger-nav {
-    display: none;
+.another-class-section {
+    padding: 20px;
+    background-color: #f7f7f7;
 }
 
-.hamburger-menu {
+.class-list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 24px;
-    cursor: pointer;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.hamburger-icon span {
-    display: block;
-    background-color: white;
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
-}
-/* Mobile nav link styles */
-.menu-links a {
-    color: #F7F9F9; /* Light ivory */
-    text-decoration: none;
+.class-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
     padding: 15px;
-    display: block;
+    width: 250px;
     text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    
+transition: transform 0.3s ease-in-out;
+
 }
 
-.menu-links a:hover {
-    background-color: #AAB7B8; /* Soft stone grey */
-    color: #2E4053; /* Deep slate blue */
+.class-item:hover {
+transform: scale(1.05);
 }
-/* * /Active hamburger menu background */ 
-.menu-links.active {
-    background-color: #5D6D7E; /* Soothing slate blue */
-}
-/* Tablet and Mobile styles */
-@media (max-width: 768px) {
-    #desktop_nav {
-        display: none;
-    }
-
-    #hamburger-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-
-    .menu-links {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .menu-links.active {
-        display: flex;
-    }
-
-    .menu-links li {
-        margin: 0;
-    }
-
-    .menu-links a {
-        color: white;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-        text-align: center;
-    }
-
-    .menu-links a:hover {
-        background-color: #575757;
-    }
-}
-
-/* Larger screens - Desktop */
-@media (min-width: 769px) {
-    #hamburger-nav {
-        display: none;
-    }
-}
-/* Hamburger icon animation */
-.hamburger-icon.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger-icon.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-icon.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-}
-
-.hamburger-icon span {
-    transition: all 0.3s ease;
-}
-
-/* Smooth dropdown transition */
-.menu-links {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-
-.menu-links.active {
-    max-height: 500px; /* Adjust based on content */
-}
-
-/*Home Page*/
-/* Base styles for header and banner */
-header.banner {
-  position: relative;
-  height: 50vh;
-  background-image: url('/Images/Homeimg.jpg');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-
-.banner p {
-  color: red;
-  padding-left: 5%;
-  margin-left: 10%;
-  margin-top: 10%;
-  border-radius: 10px;
-  font-weight: 700;
-  text-align: end;
-}
-
-header.banner p {
-  position: absolute;
-  right: 10%;
-  bottom: 20%;
-  margin-top: 0;
-  padding: 10px;
-  text-align: right;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 5px;
-}
-
-.banner .marquee {
-  font-weight: 700;
-  color: green;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 20px;
-}
-
-.banner .heading {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: #333;
-  background: -webkit-linear-gradient(45deg, #f06, #4a90e2);
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  -webkit-background-clip: text;
-  opacity: 0;
-  animation: fadeIn 2s ease-in forwards;
-  margin-top: -50px;
-  padding: 10px 0;
-  text-align: center;
-}
-
-.banner h1:hover {
-  color: #f06;
-  transform: scale(1.05);
-  transition: all 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-h1 {
-  margin: 0;
-  font-size: 3em;
-}
-
-p {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-/* Main Section Styles */
-.main.introduction {
-  padding: 20px;
-}
-
-.intro-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.intro-image-container {
-  position: relative;
-  flex: 1;
-  max-width: 100%;
-  max-width: 50%; /* Restrict maximum width */
-}
-
-.intro-image {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.intro-button {
-  position: absolute;
-  bottom: 70%;
-  left: 60%;
-  font-weight: 900;
-  transform: translateX(-50%);
-  background-color: #ff6f61;
-  border: none;
-  color: #fff;
-  width: 120px;
-  height: 120px;
-  padding: 10px 20px;
-  font-size: 1em;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.intro-button:hover {
-  background-color: #ff3b30;
-  transform: translateX(-50%) translateY(-5px);
-}
-
-.intro-text {
-  flex: 1;
-  max-width: 100%; /* Restrict maximum width */
-}
-
-h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
-.header-part {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-/* Media Queries */
-@media (min-width: 769px) and (max-width: 1200px) {
-  header.banner {
-    height: 60vh; /* Slightly increase the height for larger screens */
-    background-size: cover; /* Ensure the image scales correctly */
-    background-repeat: no-repeat;
-    background-position: center center; /* Center the image */
-  }
-}
-
-/* For tablets and mobile devices (up to 768px) */
-@media (max-width: 768px) {
-  .banner {
-    height: 40vh; /* Adjust banner height */
-  }
-
-  .banner .heading {
-    font-size: 1.2rem; /* Smaller font size for headings */
-    margin-top: -30px; /* Adjust margins */
-  }
-
-  .banner p {
+.enroll-btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 1em;
-    padding-left: 2%;
-    margin-left: 2%;
-    margin-top: 5%;
-  }
-
-  .banner .marquee {
-    font-size: 16px;
-  }
-
-  .intro-section {
-    flex-direction: column; /* Stack items vertically */
-  }
-
-  .intro-image-container {
-    max-width: 100%; /* Full width on small screens */
-  }
-
-  .intro-button {
-    width: 100px;
-    height: 100px;
-  }
-
-  .intro-text {
-    max-width: 100%;
-  }
-
-  .header-part {
-    flex-direction: column; /* Stack header items vertically */
-  }
+    transition: all 0.3s ease-out;
 }
 
-/* For very small devices (up to 480px) */
-@media (max-width: 480px) {
-  .banner {
-    height: 30vh; /* Further adjust banner height */
-  }
+.enroll-btn:hover {
+    background-color: green;
+    transform: scale(1.05);
+}
 
-  .banner .heading {
-    font-size: 1rem; /* Even smaller font size */
-  }
+.yoga-100 {
+    padding: 20px;
+    background-color: #fff;
+}
 
-  .banner p {
-    font-size: 0.9em;
-    margin-left: 1%;
-    margin-top: 2%;
-  }
-
-  .banner .marquee {
-    font-size: 14px;
-  }
-
-  .intro-button {
-    width: 80px;
-    height: 80px;
-  }
-
-  .intro-text {
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
     font-size: 1em;
-  }
-}
-/*Main Page*/
-
-/* General Styles */
-.introduction {
-  padding: 20px;
 }
 
-.intro-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.intro-image-container {
-  position: relative;
-  width: 100%;
-  padding-top: 20px; /* Added top padding for mobile and tablets */
-}
-
-.intro-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.intro-button, .home-button, .intro-text button {
-  margin: 10px;
-  padding: 12px 24px;
-  border: none;
-  color: #fff;
-  background-color: #007BFF; /* Change as needed */
-  cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.intro-button:hover, .home-button:hover, .intro-text button:hover {
-  background-color: #0056b3; /* Change as needed */
-  transform: scale(1.05); /* Slight scale effect on hover */
-}
-
-.intro-text {
-  width: 100%;
-  text-align: center;
-}
-
-.intro-text h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.intro-text p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-/* About Section */
-.About-yoga {
-  padding: 20px;
-}
-
-.About-yoga-h3 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.About-yoga-p {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.About-yoga a {
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.About-yoga a .fa {
-  margin-left: 5px;
-}
-
-.custom-btn {
-  background: transparent;
-  border-radius: var(--border-radius-small);
-  padding: 14px 24px;
-  color: var(--white-color);
-  font-size: var(--menu-font-size);
-  font-weight: var(--font-weight-normal);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-}
-
-.custom-btn:hover {
-  color: var(--primary-color);
-}
-
-.custom-btn:focus {
-  box-shadow: none;
-}
-
-.custom-btn.bg-color:hover,
-.custom-btn.bg-color:focus {
-  background: var(--white-color);
-  border-color: transparent;
-  color: var(--primary-color);
-}
-
-.bg-color {
-  background: var(--primary-color);
-  color: var(--white-color);
-}
-
-#about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-#about .left,
-#about .Right-home-about {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.spad {
-  padding-top: 0;
-  padding-bottom: 50px;
-}
-
-.home_about_pic {
-  margin-right: 0;
-  padding-right: 15px;
-}
-
-.section-title, h2 {
-  font-weight: 400;
-  font-size: 32px;
-  font-family: "Playfair Display", serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.left-of-left, .right-of-right {
-  width: 100%;
-  float: none;
-  margin-bottom: 20px;
-}
-
-.top-inner {
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.Right-home-about, p {
-  padding-top: 15px;
-  margin-bottom: 30px;
-}
-
-p, .para-2 {
-  margin-bottom: 30px;
-}
-
-.about-button {
-  background-color: red;
-  color: black;
-  margin-top: 10px;
-  padding: 15px 30px; /* Increased padding */
-  border-radius: 5px; /* Rounded corners */
-  text-transform: uppercase;
-  font-size: 16px; /* Adjusted font size */
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.about-button:hover {
-  background-color: white;
-  color: red;
-  cursor: pointer;
+.learn-more:hover {
+    background-color: #2980b9;
 }
 
 /* Responsive Styles */
-
-/* For tablets and smaller screens */
 @media (max-width: 768px) {
-  .intro-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .intro-image-container {
-    padding-top: 30px; /* Increased top padding for tablets */
-  }
-
-  .intro-text h2 {
-    font-size: 22px;
-  }
-
-  .intro-text p {
-    font-size: 14px;
-  }
-
-  .intro-button, .home-button, .intro-text button {
-    padding: 10px 20px;
-  }
-
-  .section-title, h2 {
-    font-size: 28px;
-  }
-
-  .custom-btn {
-    font-size: 0.9em;
-    padding: 12px 20px;
-  }
-
-  #about {
-    padding: 15px;
-  }
-
-  #about .left, #about .Right-home-about {
-    padding: 10px;
-  }
-}
-
-/* For mobile phones */
-@media (max-width: 480px) {
-  .intro-image-container {
-    padding-top: 40px; /* Increased top padding for mobile phones */
-  }
-
-  .intro-text h2 {
-    font-size: 20px;
-  }
-
-  .intro-text p {
-    font-size: 12px;
-  }
-
-  .intro-button, .home-button, .intro-text button {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  .section-title, h2 {
-    font-size: 24px;
-  }
-
-  .custom-btn {
-    font-size: 0.8em;
-    padding: 10px 18px;
-  }
-
-  #about {
-    padding: 10px;
-  }
-
-  #about .left, #about .Right-home-about {
-    padding: 8px;
-  }
-
-  .intro-image {
-    width: 100%;
-    height: auto;
-  }
-}
-.join-member-button {
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 50%; /* Makes the button circular */
-  width: 100px; /* Adjust size as needed */
-  height: 100px; /* Adjust size as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px; /* Adjust font size as needed */
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  position: absolute;
-  top: 20%; /* Position from the top of the container */
-  right: 20px; /* Position from the right of the container */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.join-member-button:hover {
-  background-color: darkred;
-  transform: scale(1.05); /* Slight scale effect on hover */
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .join-member-button {
-    width: 50px; /* Adjust size for tablets */
-    height: 50px; /* Adjust size for tablets */
-    font-size: 10px; /* Adjust font size for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .join-member-button {
-    width: 40px; /* Adjust size for mobile phones */
-    height: 40px; /* Adjust size for mobile phones */
-    font-size: 8px; /* Adjust font size for mobile phones */
-  }
-}
-@media (max-width: 425px) {
-  .join-member-button {
-    width: 40px; /* Adjust size for mobile phones */
-    height: 40px; /* Adjust size for mobile phones */
-    font-size: 8px; /* Adjust font size for mobile phones */
-  }
-}
-
-/* Basic Styling */
-#about {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  gap: 20px;
-}
-
-.image-gallery {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.main-image {
-  width: 100%;
-  height: auto;
-  max-width: 600px; /* Larger image */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.image-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.stack-image {
-  width: 100%;
-  height: auto;
-  max-width: 300px; /* Smaller images */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.Right-home-about {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.Right-home-about h1 {
-  margin: 0 0 15px;
-  font-size: 2.5em;
-  color: #333;
-}
-
-.Right-home-about h2 {
-  margin: 0 0 20px;
-  font-size: 1.8em;
-  color: #007BFF;
-  text-align: center;
-}
-
-.right-para span {
-  display: block;
-  font-style: italic;
-  margin-bottom: 15px;
-  color: #555;
-  font-size: 1.2em;
-}
-
-.right-para p {
-  margin-bottom: 20px;
-  line-height: 1.7;
-  color: #666;
-  font-size: 1em;
-}
-
-.about-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #007BFF;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 30px;
-  font-size: 1.1em;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.about-button:hover {
-  background: #0056b3;
-  transform: scale(1.05);
-}
-
-/* Responsive Styling */
-@media (max-width: 1440px) {
-  .main-image, .stack-image {
-    max-width: 80%;
-  }
-}
-
-@media (max-width: 1024px) {
-  #about {
-    flex-direction: column;
-  }
-
-  .image-gallery {
-    flex-direction: column;
-  }
-
-  .main-image, .stack-image {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .Right-home-about h1 {
-    font-size: 2em;
-  }
-
-  .Right-home-about h2 {
-    font-size: 1.5em;
-  }
-
-  .right-para span {
-    font-size: 1.1em;
-  }
-
-  .right-para p {
-    font-size: 0.9em;
-  }
-
-  .about-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .stack-image {
-    max-width: 100%;
-  }
-}
-
- /*about section*/
- body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-}
-
-.content {
-    flex: 0 0 60%; /* Fixed 60% width for content */
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden; /* Prevent content from overflowing */
-}
-
-.slider {
-    flex: 0 0 40%; /* Fixed 40% width for the slider */
-    position: relative;
-    box-sizing: border-box;
-}
-
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .container {
+    .class-list {
         flex-direction: column;
+        align-items: center;
     }
 
-    .content, .slider {
-        width: 100%;
-    }
-
-    .slider {
-        order: 2; /* Ensure slider comes after content */
-    }
-
-    .content {
-        order: 1; /* Ensure content comes before slider */
+    .class-item {
+        width: 90%;
     }
 }
 
-
-</style>
+  </style>
+</head>
 <body>
+  <section id="class" class="section-class">
+    <h1 class="class-heading">Welcome to Our Yoga Class</h1>
+    
+        <ul class="class-navbar">
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#yttc100">100-Hour YTTC</a></li>
+            <li><a href="#yttc200">200-Hour YTTC</a></li>
+        </ul>
+    
+</section>
+<section class="yoga-schedule">
+    <h2>About the Class</h2>
+<p>**Join Our New Yoga Journey**  
+Embark on a transformative journey with our latest yoga Classes designed for all levels. Whether you're a beginner or an experienced practitioner, this course will deepen your practice, enhance your flexibility, and bring peace to your mind. Guided by expert instructors, you'll explore a blend of traditional poses, breathing techniques, and mindfulness practices. Join us to cultivate strength, serenity, and a deeper connection to yourself. Your path to wellness starts here—
+<a href="Membership Form.html " target="_blank">www.NamasteYoga.in</a>
 
-<nav id="desktop_nav">
-    <div class="logo">Namaste Yoga</div>
-    <ul class="nav_Link">
-        <li><a href="#about">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#team">Our Team</a></li>
-        <li><a href="#class">Class</a></li>
-        <li><a href="#schedule">Schedule</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-    </ul>
-</nav>
+--</p>    
 
-<nav id="hamburger-nav">
-    <div class="logo">Namaste Yoga</div>
-    <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+
+</section>
+<section class="another-class-section">
+    <h2>We offer yoga classes that blend mindful practice with expert guidance for all levels:</h2>
+    <div class="class-list">
+        <div class="class-item">
+            <h3>Beginner Yoga</h3>
+            <p>Instructor: John Doe</p>
+            <p>Time: Monday &amp; Wednesday, 8:00 AM - 9:00 AM</p>
+            <button class="enroll-btn">Enroll Now</button>
         </div>
+        <div class="class-item">
+            <h3>Vinyasa Flow</h3>
+            <p>Instructor: Jane Smith</p>
+            <p>Time: Tuesday &amp; Thursday, 6:00 PM - 7:00 PM</p>
+            <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <div class="class-item">
+            <h3>Beginner Yoga</h3>
+            <p>Instructor: John Doe</p>
+            <p>Time: Monday &amp; Wednesday, 8:00 AM - 9:00 AM</p>
+            <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <div class="class-item">
+            <h3>Vinyasa Flow</h3>
+            <p>Instructor: Jane Smith</p>
+            <p>Time: Tuesday &amp; Thursday, 6:00 PM - 7:00 PM</p>
+            <button class="enroll-btn">Enroll Now</button>
+        </div>
+        <!-- Add more classes as needed -->
     </div>
-    <ul class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">Home</a></li>
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#gallery" onclick="toggleMenu()">Gallery</a></li>
-        <li><a href="#team" onclick="toggleMenu()">Our Team</a></li>
-        <li><a href="#class" onclick="toggleMenu()">Class</a></li>
-        <li><a href="#schedule" onclick="toggleMenu()">Schedule</a></li>
-        <li><a href="#events" onclick="toggleMenu()">Events</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact Us</a></li>
-    </ul>
-</nav>
+</section>
+<section id="yttc100" class="yoga-100">
+    <h2>100-Hour Yoga Teacher Training Course</h2>
+    <p>Details about the 100-Hour YTTC. This course is designed for those who want to deepen their practice.
+        lorem20..</p>
+    <a href="yttc100.html" class="learn-more">Learn More</a>
+</section>
+<section id="yttc200" class="yoga-100">
+    <h2>200-Hour Yoga Teacher Training Course</h2>
+    <p>Details about the 200-Hour YTTC. This course is ideal for those looking to become certified yoga instructors...</p>
+    <a href="yttc200.html" class="learn-more">Learn More</a>
+</section>
 
-<header class="banner">
-    <h1 class="heading">Grand Opening of Yoga Classes</h1>
-<p> "Give yourself time and stay healthy <br>— practice yoga to escape the rush of life"</p>
-<marquee class="marquee" behavior="scroll" direction="up" scrollamount="2" scrolldelay="100">
-    'Inhale the Future, Exhale the Past'
-  </marquee>
-  
-</header>
 
-         <main class="introduction">
-        <section class="intro-section">
-            <div class="intro-image-container">
-                <img src="/Images/background-image.jpg" alt="Yoga class" class="intro-image"> <!-- Replace with your image URL -->
-                <a  href="Membership Form.html"><button class="join-member-button">Become a Member</button></a>
-            </div>
-            <div class="intro-text">
-                <h2>Welcome to "Namaste Yoga" School</h2>
-                <p>At Namaste Yoga School, we are committed to providing a serene and supportive environment for your yoga practice. Our team of experienced instructors offers a variety of classes designed to improve physical strength, mental clarity, and overall well-being. Join us and explore the transformative benefits of yoga, whether you're just starting out or looking to deepen your practice.</p>
-                <button class="home-button"> Try 14 days Free</button>
-            
-                    <a href="userRegisandLoginForm.html" target="_blank">  <button>Sign Up</button></a>
-            </div>
-            
-        </section>
-      </main>
 
-      
-          <div class="container">
-              <div class="content">
-                  <h1>About Us</h1>
-                  <p>Welcome to our yoga classes. We offer a variety of classes suitable for all levels.</p>
-                  <h2>Our Classes</h2>
-                  <p>Explore our different yoga classes and find the perfect one for you.</p>
-              </div>
-              <div class="slider">
-                  <div class="swiper-container">
-                      <div class="swiper-wrapper">
-                          <div class="swiper-slide"><img src="/Images/img1.jpg" alt="Yoga Image 1"></div>
-                          <div class="swiper-slide"><img src="/Images/img2.jpg" alt="Yoga Image 2"></div>
-                          <div class="swiper-slide"><img src="/Images/background-image.jpg" alt="Yoga Image 3"></div>
-                          <!-- Add up to 10 images -->
-                      </div>
-                      <div class="swiper-pagination"></div>
-                      <div class="swiper-button-next"></div>
-                      <div class="swiper-button-prev"></div>
-                  </div>
-              </div>
-          </div>
-      
-      
-   
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="script.js"></script>
-  
 <script>
-    function toggleMenu() {
-        const menuLinks = document.querySelector('.menu-links');
-        menuLinks.classList.toggle('active');
-    }
-    function toggleMenu() {
-        const menuLinks = document.querySelector('.menu-links');
-        const hamburgerIcon = document.querySelector('.hamburger-icon');
-
-        menuLinks.classList.toggle('active');
-        hamburgerIcon.classList.toggle('active');
-    }
-  // script.js
-// script.js
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.swiper-container', {
-        loop: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        effect: 'slide',
-        slidesPerView: 1,
+  // Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 });
 
-
 </script>
-
+  
 </body>
 </html>
