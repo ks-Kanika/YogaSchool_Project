@@ -66,3 +66,148 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+/* Contact*/
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      let isValid = validateForm();
+
+      if (isValid) {
+          submitButton.textContent = 'Sending...';
+          submitButton.disabled = true;
+
+          // Simulate form submission (replace this with actual submission logic)
+          setTimeout(() => {
+              alert('Message sent successfully!');
+              submitButton.textContent = 'Send Message';
+              submitButton.disabled = false;
+              form.reset();
+          }, 1000);
+      }
+  });
+
+  function validateForm() {
+      let valid = true;
+
+      // Basic Name Validation
+      if (nameInput.value.trim() === '') {
+          valid = false;
+          nameInput.style.borderColor = 'red';
+          nameInput.placeholder = 'Please enter your name';
+      } else {
+          nameInput.style.borderColor = '#ddd';
+      }
+
+      // Basic Email Validation
+      if (emailInput.value.trim() === '' || !validateEmail(emailInput.value.trim())) {
+          valid = false;
+          emailInput.style.borderColor = 'red';
+          emailInput.placeholder = 'Please enter a valid email';
+      } else {
+          emailInput.style.borderColor = '#ddd';
+      }
+
+      // Basic Message Validation
+      if (messageInput.value.trim() === '') {
+          valid = false;
+          messageInput.style.borderColor = 'red';
+          messageInput.placeholder = 'Please enter your message';
+      } else {
+          messageInput.style.borderColor = '#ddd';
+      }
+
+      return valid;
+  }
+
+  function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+  const modal = document.getElementById('custom-alert');
+  const closeBtn = document.querySelector('.close-btn');
+  const okBtn = document.querySelector('.ok-btn');
+
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      let isValid = validateForm();
+
+      if (isValid) {
+          submitButton.textContent = 'Sending...';
+          submitButton.disabled = true;
+
+          // Simulate form submission (replace this with actual submission logic)
+          setTimeout(() => {
+              showModal();
+              submitButton.textContent = 'Send Message';
+              submitButton.disabled = false;
+              form.reset();
+          }, 2000);
+      }
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  okBtn.addEventListener('click', closeModal);
+
+  function validateForm() {
+      let valid = true;
+
+      if (nameInput.value.trim() === '') {
+          valid = false;
+          nameInput.style.borderColor = 'red';
+          nameInput.placeholder = 'Please enter your name';
+      } else {
+          nameInput.style.borderColor = '#ddd';
+      }
+
+      if (emailInput.value.trim() === '' || !validateEmail(emailInput.value.trim())) {
+          valid = false;
+          emailInput.style.borderColor = 'red';
+          emailInput.placeholder = 'Please enter a valid email';
+      } else {
+          emailInput.style.borderColor = '#ddd';
+      }
+
+      if (messageInput.value.trim() === '') {
+          valid = false;
+          messageInput.style.borderColor = 'red';
+          messageInput.placeholder = 'Please enter your message';
+      } else {
+          messageInput.style.borderColor = '#ddd';
+      }
+
+      return valid;
+  }
+
+  function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+  }
+
+  function showModal() {
+      modal.style.display = 'flex';
+  }
+
+  function closeModal() {
+      modal.style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+      if (event.target === modal) {
+          closeModal();
+      }
+  };
+});
